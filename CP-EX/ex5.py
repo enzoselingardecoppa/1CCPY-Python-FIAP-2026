@@ -1,0 +1,11 @@
+maior = int(input("escolha o primeiro numero: "))
+num2 = int(input("escolha o segundo numero: "))
+num3 = int(input("escolha o terceiro numero: "))
+num4 = int(input("escolha o quarto numero: "))
+num5 = int(input("escolha o quinto numero: "))
+numeros = [maior, num2, num3, num4, num5]
+for numero in numeros:
+    if numero > maior:
+        maior = numero
+
+print(f'O maior numero digitado foi {maior}')
