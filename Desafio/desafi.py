@@ -24,4 +24,11 @@ def erros_seguidos(codigos):
             return True
     return False
 
-print(erros_seguidos(status[2]))
+def analisar_endpoint(codigos_endpoints):
+    qtd_sucesso = 0
+    for codigo in codigos_endpoints:
+        if eh_sucesso(codigo):
+            qtd_sucesso += 1
+    qtd_total = len(codigos_endpoints)
+    qtd_erros = - qtd_total - qtd_sucesso
+    porcentagem_sucesso = (qtd_sucesso / qtd_total) * 100
